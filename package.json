@@ -1,0 +1,50 @@
+{
+  "name": "ola-mundo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.1",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.4"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "update": "npx npm-check-updates -u && npm install",
+    "audit": "npm audit",
+    "format": "prettier --write .",
+    "lint": "eslint './src/**/*.{js,jsx,ts,tsx}'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "eslint:recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
