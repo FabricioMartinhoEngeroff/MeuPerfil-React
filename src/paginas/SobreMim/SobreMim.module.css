@@ -9,6 +9,14 @@
     margin-bottom: 2rem;
     font-size: 2.5rem;
 }
+
+.lista li {
+    font-size: 1.2rem; 
+}
+
+.espacamento {
+    margin-top: 2rem; 
+}
  
 .paragrafo {
     text-align: justify;

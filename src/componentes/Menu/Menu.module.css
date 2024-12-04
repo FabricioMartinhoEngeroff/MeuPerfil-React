@@ -1,14 +1,48 @@
-
-.navegacao {
-    height: 112px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 3rem;
+.header {
+  padding: 1rem;
+  background: url('../../assets/code.png') no-repeat center/cover;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (max-width: 744px) {
-    .navegacao {
-        height: 72px;
-    }
+.navegacao {
+  height: 112px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.link:hover {
+  color: #00bcd4;
+  border-color: #00bcd4;
+  background-color: rgba(0, 188, 212, 0.2);
+  transform: scale(1.1);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.link:hover .icon {
+  color: #00bcd4;
 }
