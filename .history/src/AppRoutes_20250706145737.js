@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./componentes/Menu";
 import Inicio from "./paginas/Inicio";
 import SobreMim from "./paginas/SobreMim";
-import Contato from "paginas/Contato";
-
 
 function AppRoutes() {
   return (
@@ -20,7 +18,6 @@ function AppRoutes() {
         <Route path="/" element={<PaginaPadrao />}>
           <Route index element={<Inicio />} />
           <Route path="sobremim" element={<SobreMim />} />
-          <Route path="contato" element={<Contato />} />
         </Route>
 
         <Route path="posts/:id/*" element={<Post />} />
