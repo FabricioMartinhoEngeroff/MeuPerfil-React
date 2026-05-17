@@ -18,7 +18,7 @@ export default function Menu() {
 </Link>
         <a
           className={styles.link}
-          href="https://github.com/FabricioMartinhoEngeroff?tab=repositories"
+          href="/portfolio.html"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabrício Engeroff — Backend Developer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Header */
+  header {
+    padding: 4rem 0 3rem;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #333;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+
+  .btn:hover {
+    background: #252525;
+    border-color: #4a9eff;
+  }
+
+  .btn-primary {
+    background: #4a9eff;
+    border-color: #4a9eff;
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: #3a8eef;
+  }
+
+  /* Sections */
+  section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  section:last-of-type {
+    border-bottom: none;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #4a9eff;
+  }
+
+  /* About */
+  .about p {
+    color: #aaa;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Projects */
+  .project {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+  }
+
+  .project h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project p {
+    color: #aaa;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    background: #252525;
+    padding: 0.3rem 0.7rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    color: #888;
+    border: 1px solid #333;
+  }
+
+  .project-link {
+    color: #4a9eff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .project-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1rem;
+    color: #4a9eff;
+    margin-bottom: 0.8rem;
+  }
+
+  .skill-category ul {
+    list-style: none;
+    color: #aaa;
+  }
+
+  .skill-category li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #666;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .container { padding: 1rem; }
+    .links { flex-direction: column; }
+    .skills-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <h1>Fabrício Engeroff</h1>
+    <p class="subtitle">Backend Developer · Java & DevSecOps</p>
+    <p style="color: #aaa; max-width: 600px;">
+      Desenvolvedor backend com foco em Java e Spring Boot. Estudante de Engenharia de Software na UniCesumar.
+      Construindo projetos reais desde março de 2022, com ênfase em arquitetura, segurança e DevOps.
+    </p>
+    <div class="links">
+      <a href="https://github.com/FabricioMartinhoEngeroff" target="_blank" class="btn btn-primary">GitHub</a>
+      <a href="https://www.linkedin.com/in/fabricio-martinho-engeroff" target="_blank" class="btn">LinkedIn</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about">
+    <h2>Sobre</h2>
+    <p>
+      Há 3+ anos no GitHub, transformo cada novo conceito em código real. Meu projeto cobaia é o VidaLongaFlix —
+      uma plataforma full-stack onde aplico TDD, CI/CD, observabilidade e segurança desde o primeiro commit.
+    </p>
+    <p>
+      Formação: 50+ certificações (Alura, Google Cloud, Udemy) em Java, Spring Boot, Kafka, Microsserviços,
+      DevOps, AppSec, PostgreSQL, Docker e AWS.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Projetos</h2>
+
+    <!-- VidaLongaFlix -->
+    <div class="project">
+      <h3>VidaLongaFlix</h3>
+      <p>
+        Plataforma de streaming focada em saúde e longevidade. Full-stack com backend Java Spring Boot + frontend Angular 21.
+        Sistema completo com autenticação JWT, catálogo de vídeos, favoritos, comentários, painel admin e deploy na AWS.
+      </p>
+      <div class="tags">
+        <span class="tag">Java 17</span>
+        <span class="tag">Spring Boot 3.5</span>
+        <span class="tag">Angular 21</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">AWS (EB, RDS, S3, CloudFront)</span>
+        <span class="tag">Docker</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">OpenTelemetry</span>
+        <span class="tag">Grafana Cloud</span>
+      </div>
+      <a href="https://github.com/FabricioMartinhoEngeroff/VidaLongaFlix" target="_blank" class="project-link">Ver código →</a>
+    </div>
+
+    <!-- BMHE Analytics -->
+    <div class="project">
+      <h3>BMHE Analytics</h3>
+      <p>
+        Dashboard analítico full-stack com backend FastAPI e frontend React. Autenticação JWT, integração WhatsApp (Twilio),
+        migrações com Alembic e suporte a Model Context Protocol (MCP) para agentes de IA. Dashboard com métricas de vendas,
+        lucro e clientes.
+      </p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">React</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Vite</span>
+        <span class="tag">JWT</span>
+        <span class="tag">Twilio</span>
+        <span class="tag">Alembic</span>
+        <span class="tag">MCP</span>
+      </div>
+      <a href="https://github.com/FabricioMartinhoEngeroff/BMHE-Analytics" target="_blank" class="project-link">Ver código →</a>
+    </div>
+
+    <!-- GymWave -->
+    <div class="project">
+      <h3>GymWave Strength</h3>
+      <p>
+        Aplicação para gestão de treinos e acompanhamento de evolução em academia. Backend com API RESTful,
+        gerenciamento de usuários, autenticação e armazenamento de dados de performance. PowerWave Gym —
+        ganhos reais de força através da periodização ondulatória.
+      </p>
+      <div class="tags">
+        <span class="tag">TypeScript</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">REST API</span>
+      </div>
+      <a href="https://github.com/FabricioMartinhoEngeroff/GymWave-Strength" target="_blank" class="project-link">Ver código →</a>
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Stack & Skills</h2>
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <h3>Backend</h3>
+        <ul>
+          <li>Java 17</li>
+          <li>Spring Boot 3, Spring Security</li>
+          <li>JPA / Hibernate</li>
+          <li>REST APIs</li>
+          <li>Microsserviços</li>
+          <li>Kafka, RabbitMQ</li>
+          <li>Python (FastAPI, Alembic)</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>Dados</h3>
+        <ul>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>Redis</li>
+          <li>JDBC</li>
+          <li>PL/pgSQL</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>DevOps</h3>
+        <ul>
+          <li>Docker</li>
+          <li>GitHub Actions</li>
+          <li>CI/CD</li>
+          <li>AWS (EC2, EB, RDS, S3, CloudFront)</li>
+          <li>Google Cloud</li>
+          <li>HashiCorp Vault</li>
+          <li>Linux</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>Segurança</h3>
+        <ul>
+          <li>AppSec</li>
+          <li>OWASP</li>
+          <li>OAuth 2.0, JWT</li>
+          <li>SAST / DAST</li>
+          <li>API Security</li>
+          <li>DevSecOps</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <ul>
+          <li>Angular 21</li>
+          <li>React, TypeScript</li>
+          <li>RxJS</li>
+          <li>Angular Material</li>
+          <li>Vite</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>Outras</h3>
+        <ul>
+          <li>Git / GitHub</li>
+          <li>TDD, Clean Code</li>
+          <li>DDD, SOLID</li>
+          <li>Observabilidade (OpenTelemetry, Grafana)</li>
+          <li>Redes TCP/IP, VPN, Firewalls</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Formação -->
+  <section>
+    <h2>Formação</h2>
+    <div style="margin-bottom: 1.5rem;">
+      <strong style="color: #e0e0e0;">Engenharia de Software</strong>
+      <p style="color: #aaa; font-size: 0.9rem;">UniCesumar · 2022 — presente</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <strong style="color: #e0e0e0;">Certificações Recentes (2025–2026)</strong>
+      <ul style="color: #aaa; font-size: 0.9rem; margin-left: 1.2rem; margin-top: 0.5rem;">
+        <li>Google Cloud — Load Balancing on Compute Engine</li>
+        <li>Cibersegurança — Redes, OSI, TCP/IP, Firewalls, VPN (Alura)</li>
+        <li>HashiCorp Vault — DevSecOps & Rotação de Segredos (Alura)</li>
+        <li>Segurança de APIs — OWASP, OAuth 2.0, JWT (Alura)</li>
+        <li>GitHub Actions — CI/CD com segurança (Alura)</li>
+        <li>AppSec — Fundamentos de segurança no desenvolvimento (Alura)</li>
+        <li>+ 40 certificações em Java, Spring Boot, Kafka, Microsserviços, PostgreSQL, Docker</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>Fabrício Martinho Engeroff — Backend Developer · 2026</p>
+</footer>
+
+</body>
+</html>
